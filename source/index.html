@@ -8,31 +8,33 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo" href="#">
-      <img src="img/logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
-      <img src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="#">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="container">
+      <a class="main-header__logo logo" href="#">
+        <picture>
+        </picture>
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="#">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Кэт энерджи</h1>
     <section class="promo">
-      <div class="promo__wrapper">
+      <div class="container">
         <header class="promo__header">
           <h2 class="promo__title">Функциональное питание для котов</h2>
           <div class="promo__slogan">Занялся собой? Займись котом!</div>
@@ -41,25 +43,29 @@
         <a class="promo__button button-programm" href="#">Подобрать программу</a>
       </div>
     </section>
-    <section class="effect-info effect__info--slim">
-      <div class="effect-info__wrapper">
-        <h2 class="effect-info__title">Похудение</h2>
-        <p class="effect-info__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-          Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <а class="effect-info__link to-catalog-link" href="#">Каталог slim</a>
-      </div>
-    </section>
-    <section class="effect-info effect__info--pro">
-      <div class="effect-info__wrapper">
-        <h2 class="effect-info__title">Набор массы</h2>
-        <p class="effect-info__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-          поможет вашему коту нарастить необходимые мышцы!</p>
-        <а class="effect-info__link to-catalog-link" href="#">Каталог pro</a>
+    <section class="effect-info">
+      <div class="container">
+        <h2 class="visually-hidden">Выбор программы</h2>
+        <ul class="effect-info__list">
+          <li class="effect-info__item effect-info__item--slim">
+            <h3 class="visually-hidden">Похудение</h3>
+            <p class="effect-info__description">Ваш кот весит больше собаки и почти утратил способность лазить по
+              деревьям?
+              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <а class="effect-info__link to-catalog-link" href="#">Каталог slim</a>
+          </li>
+          <li class="effect-info__item effect-info__item--pro">
+            <h3 class="effect-info__title">Набор массы</h3>
+            <p class="effect-info__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
+              Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <а class="effect-info__link to-catalog-link" href="#">Каталог pro</a>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="usage">
-      <div class="usage__wrapper">
-        <h2 class="usage__title">Как это работает</h2>
+      <div class="container">
+        <h2 class="usage__title section-title">Как это работает</h2>
         <ul class="usage__list">
           <li class="usage__item usage__item--healthy">
             Функциональное питание
@@ -83,8 +89,8 @@
       </div>
     </section>
     <section class="example">
-      <div class="example__wrapper">
-        <h2 class="example__title">Живой пример</h2>
+      <div class="container">
+        <h2 class="example__title section-title">Живой пример</h2>
         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
           Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
           16
@@ -130,44 +136,47 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
-      <section class="main-footer__contacts contacts">
-        <div class="contacts__wrapper">
-          <h2 class="visually-hidden">Наш адресс</h2>
-          <div class="contacts__info">
-            <p class="contacts__partnership-text">Приглашаем <br> к сотрудничеству <br> диллеров!</p>
-            <p class="contacts__address"> ул. Большая <br> Конюшенная, д. 19/8<br> Санкт-Петербург </p>
-          </div>
-          <div class="contacts__map">
-            <script type="text/javascript" charset="utf-8" async
-              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A04efd03f94d78675a333acac88915503457e03cadb3e3d158f3339696a630785&amp;width=100%25&amp;height=532&amp;lang=ru_RU&amp;scroll=true"></script>
-          </div>
+    <section class="main-footer__contacts contacts">
+      <div class="container">
+        <h2 class="visually-hidden">Наш адресс</h2>
+        <div class="contacts__info">
+          <p class="contacts__partnership-text">Приглашаем <br> к сотрудничеству <br> диллеров!</p>
+          <p class="contacts__address"> ул. Большая <br> Конюшенная, д. 19/8<br> Санкт-Петербург </p>
         </div>
-      </section>
-      <div class="main-footer__logo">
-        <img src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
       </div>
-      <div class="main-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram" href="#">Мы в Телеграме</a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML
-            Academy</span>
-          <img class="copyright__logo" src="img/logo-html-academy.svg" width="27" height="34" alt="HTML Academy">
-        </a>
-      </div>
+    </section>
+    <div class="main-footer__map">
+      <script type="text/javascript" charset="utf-8" async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A04efd03f94d78675a333acac88915503457e03cadb3e3d158f3339696a630785&amp;width=100%25&amp;height=532&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
+    <section class="main-footer__info">
+      <div class="container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="main-footer__logo">
+          <img src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
+        </div>
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="#">Мы в Телеграме</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML
+              Academy</span>
+            <img class="copyright__logo" src="img/logo-html-academy.svg" width="27" height="34" alt="HTML Academy">
+          </a>
+        </div>
+      </div>
+    </section>
   </footer>
 </body>
 
