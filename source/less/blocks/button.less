@@ -1,0 +1,44 @@
+.button {
+  box-sizing: border-box;
+  padding: 8px 44px;
+  width: 100%;
+  height: 40px;
+  background: @basic-green;
+  border: none;
+
+  font-family: @font-oswald;
+  color: @white;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &:hover {
+    background: @basic-green-darker;
+  }
+
+  &:active {
+    background: @basic-green-darker;
+    color: fade(@white, 30);
+  }
+
+  &--secondary {
+    background: @super-light-grey;
+    font-family: @font-oswald;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+    text-transform: uppercase;
+    color: @grey;
+  }
+
+  &--secondary:hover {
+    background: @special-grey;
+  }
+
+  &--secondary:active {
+    background: @special-grey;
+    color: fade(@grey, 30);
+  }
+}
