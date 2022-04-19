@@ -4,11 +4,19 @@
 
 .effect-info__list {
   .list();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .effect-info__item {
   padding: 0 18px 19px 18px;
   margin-top: 20px;
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 570px;
+  }
 }
 
 .effect-info__title {

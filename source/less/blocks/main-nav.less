@@ -1,6 +1,19 @@
-.main-nav {
+.main-nav__toggle {
+  width: 24px;
+  height: 16px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
   .list();
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }

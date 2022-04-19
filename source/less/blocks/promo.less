@@ -1,14 +1,61 @@
 .promo {
-  width: 100%;
+  display: grid;
+  grid-template-rows: 300px auto;
 
   color: @white;
 
+  @media (min-width: @desktop-width) {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.promo .container {
+  width: 100%;
+
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 100;
+
+  display: grid;
+  grid-template-rows: auto auto 40px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-rows: auto auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+.promo__background {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
   .promo-background(url("../../img/index-background-desktop@1x.jpg"));
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    background: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
 }
 
 .promo__header {
   padding: 27px 0 29px 0;
   margin: 0;
+
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+  }
 }
 
 .promo__title {
@@ -21,8 +68,29 @@
 }
 
 .promo__image {
+  @media (min-width: @tablet-width) {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1/-1;
+    grid-column: 2/-1;
+  }
 }
 
 .promo__button {
   display: block;
+  align-self: end;
+
+  @media (min-width: @tablet-width) {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    align-self: start;
+    z-index: 100;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+  }
 }

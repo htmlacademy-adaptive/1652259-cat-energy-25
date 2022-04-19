@@ -1,15 +1,35 @@
-.example {
+.example .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "e-title"
+    "e-text"
+    "e-stats"
+    "e-slider";
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "e-title e-slider"
+      "e-text e-slider"
+      "e-stats e-slider";
+  }
 }
 
 .example__title {
   margin: 74px 0 40px 0;
+
+  grid-area: e-title;
 }
 
 .example__description {
   margin-bottom: 20px;
+
+  grid-area: e-text;
 }
 
 .example__stats {
+  grid-area: e-stats;
 }
 
 .example__cost-info {
@@ -23,4 +43,10 @@
 
 .example__visualisation {
   margin: 40px 0 40px 0;
+
+  grid-area: e-slider;
+
+  @media (min-width: @desktop-width) {
+    justify-self: end;
+  }
 }
