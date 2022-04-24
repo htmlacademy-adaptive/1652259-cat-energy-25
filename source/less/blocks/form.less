@@ -45,6 +45,13 @@
 
 .form__footer {
   grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
 
   margin-bottom: 32px;
 }
