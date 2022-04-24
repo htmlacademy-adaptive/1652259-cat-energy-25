@@ -1,8 +1,15 @@
-/* stylelint-disable block-no-empty*/
 .stats {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 .stats__list {
+  display: flex;
 }
 
 .stats__item {
@@ -24,4 +31,16 @@
   line-height: 1;
   text-align: center;
   color: @grey;
+}
+
+.stats__cost-info {
+  justify-self: center;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    justify-self: end;
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
 }
