@@ -1,8 +1,7 @@
 .header {
   padding: 10px 0 28px 0;
-
   grid-column: 1/-1;
-
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     padding: 66px 0 24px 0;
@@ -11,12 +10,10 @@
   @media (min-width: @desktop-width) {
     padding: 53px 0 29px 0;
   }
-
-  background-color: @white;
 }
 
 .header__logo {
-  margin: 12px 0 0 0;
+  margin: 0;
   height: 38px;
 
   @media (min-width: @tablet-width) {
@@ -30,11 +27,15 @@
 
 .header .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
 }

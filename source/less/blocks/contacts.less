@@ -2,6 +2,14 @@
   display: flex;
   justify-content: space-between;
   padding: 26px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 0 56px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 56px 80px;
+  }
 }
 
 .contacts__partnership-text {
@@ -17,4 +25,8 @@
   font-size: 14px;
   line-height: 1.43;
   color: @grey;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    text-align: right;
+  }
 }

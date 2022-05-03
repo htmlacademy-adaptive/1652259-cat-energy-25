@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
+  counter-reset: usage;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -22,5 +23,44 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0 94px;
+  }
+}
+
+.usage__item {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  counter-increment: usage;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 0 57px 0;
+
+    &::after {
+      content: counter(usage);
+      position: absolute;
+      top: 0;
+      right: -8px;
+      z-index: -1;
+      font-family: @font-oswald;
+      font-size: 280px;
+      line-height: 1;
+      color: @super-light-grey;
+    }
+  }
+}
+
+.usage__icon {
+  margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+    margin-bottom: 31px;
+
+    width: 80px;
+    height: 80px;
   }
 }

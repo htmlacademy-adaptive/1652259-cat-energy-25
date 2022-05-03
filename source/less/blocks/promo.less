@@ -13,7 +13,7 @@
 .promo .container {
   grid-column: 1/-1;
   grid-row: 1/-1;
-  z-index: 100;
+  z-index: 50;
 
   display: grid;
   grid-template-rows: auto auto 40px;
@@ -25,6 +25,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
+    padding-top: 141px;
   }
 }
 
@@ -51,6 +52,10 @@
   grid-column: 1/-1;
   grid-row: 1/2;
 
+  @media (min-width: @tablet-width) {
+    justify-self: start;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
   }
@@ -59,10 +64,20 @@
 .promo__title {
   margin-bottom: 25px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 41px;
+    text-align: left;
+  }
 }
 
 .promo__slogan {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+    text-align: left;
+  }
 }
 
 .promo__image {
@@ -78,7 +93,10 @@
 }
 
 .promo__button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   align-self: end;
 
   @media (min-width: @tablet-width) {

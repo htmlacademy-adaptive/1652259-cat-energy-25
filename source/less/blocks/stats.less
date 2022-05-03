@@ -10,6 +10,7 @@
 
 .stats__list {
   display: flex;
+  justify-content: center;
 }
 
 .stats__item {
@@ -26,11 +27,18 @@
 }
 
 .stats__description {
+  margin: 0;
   font-family: @font-arial;
   font-size: 12px;
   line-height: 1;
   text-align: center;
   color: @grey;
+
+  @media (max-width: @mobile-width-only) {
+    display: inline-block;
+    min-height: 24px;
+    width: 77px;
+  }
 }
 
 .stats__cost-info {
