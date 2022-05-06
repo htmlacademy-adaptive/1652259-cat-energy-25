@@ -42,7 +42,7 @@
   z-index: 10;
   display: block;
   width: 24px;
-  height: 16px;
+  height: 24px;
   border: none;
 
   @media (min-width: @tablet-width) {
@@ -52,14 +52,14 @@
 
 .main-nav--opened {
   .main-nav__toggle {
-    top: -55px;
+    top: -45px;
 
     &::before,
     &::after {
       position: absolute;
       content: "";
       z-index: 10;
-      top: 22px;
+      top: 7px;
       left: 0;
       width: 25px;
       height: 2px;
@@ -77,13 +77,17 @@
   }
 }
 
-.main-nav--closed .main-nav__toggle::before {
-  position: absolute;
-  content: "";
-  top: 24px;
-  left: 0;
-  width: 24px;
-  height: 2px;
-  background-color: @black;
-  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+.main-nav--closed .main-nav__toggle {
+  top: 22px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  }
 }
