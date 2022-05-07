@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -29,10 +35,18 @@ img {
 
 .visually-hidden {
   position: absolute;
-  visibility: hidden;
+
+  width: 1px;
+  height: 1px;
   margin: -1px;
+  border: 0;
   padding: 0;
-  width: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .hidden {

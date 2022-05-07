@@ -5,6 +5,7 @@
 }
 
 .promo-background(@url-img) {
+  background-color: @basic-green;
   background-image: linear-gradient(
       to top,
       rgba(104, 183, 56, 0.85),
@@ -32,4 +33,20 @@
 .input-box() {
   height: 45px;
   border: @input-border;
+}
+
+.footer-element-mobile(@justify-value, @padding-value) {
+  display: flex;
+  justify-content: @justify-value;
+
+  padding: @padding-value;
+  border-bottom: @element-border;
+}
+
+.footer-element(@justify-value) {
+  display: flex;
+  justify-content: @justify-value;
+
+  padding: 0;
+  border-bottom: none;
 }
