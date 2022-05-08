@@ -1,5 +1,16 @@
 .additional-info {
   .fieldset-style();
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .additional-info__title {
@@ -7,6 +18,20 @@
 }
 
 .additional-info__field {
+  position: relative;
+  margin-left: 45px;
+  padding: 5px 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: -45px;
+    background-image: url("/img/inputs/checkbox.svg");
+  }
+
   &:not(:last-child) {
     margin-bottom: 12px;
   }

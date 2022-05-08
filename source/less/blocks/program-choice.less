@@ -1,9 +1,30 @@
 .program-choice {
   .fieldset-style();
   .input-text(@super-dark-grey);
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 28px;
+  }
 }
 
 .program-choice__field {
+  position: relative;
+  margin-left: 45px;
+  padding: 3px 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: -45px;
+    background-image: url("/img/inputs/radiobutton.svg");
+  }
+
   &:not(:last-child) {
     margin-bottom: 13px;
   }

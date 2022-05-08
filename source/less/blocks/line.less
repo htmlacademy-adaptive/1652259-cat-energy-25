@@ -1,0 +1,30 @@
+.line {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    z-index: -1;
+    background-color: @basic-green;
+  }
+}
+
+.line .container {
+  display: block;
+}
+
+.line__title {
+  display: inline-block;
+  background-color: @white;
+  padding: 0 20px;
+  margin-left: -20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+    margin-left: -40px;
+  }
+}

@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-
   padding: 0;
 }
 
@@ -58,10 +57,20 @@
 }
 
 .form__submit {
-  margin-bottom: 21px;
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 21px;
+  }
 }
 
 .form__legend {
   margin: 0;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 81px;
+  }
 }

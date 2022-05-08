@@ -1,9 +1,40 @@
 .show-more {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 161px 38px 38px 38px;
+  }
 }
 
 .show-more__title {
+  position: relative;
   margin: 23px 0 8px 0;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 49px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -53px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-image: url("/img/icons/plus.svg");
+    background-size: cover;
+
+    @media (min-width: @tablet-width) {
+      top: -107px;
+      // left: 0;
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
 .show-more__text {

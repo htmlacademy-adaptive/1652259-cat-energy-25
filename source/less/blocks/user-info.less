@@ -7,8 +7,19 @@
 
 .user-info__field {
   .input-text(@grey;);
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
 
   &:not(:last-child) {
     margin-bottom: 12px;
   }
+}
+
+.user-info__label {
+  margin-right: 13px;
+}
+
+.user-info__input {
+  flex-grow: 1;
 }

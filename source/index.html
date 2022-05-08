@@ -11,15 +11,22 @@
 <body>
   <header class="body__header header">
     <div class="container">
-      <a class="header__logo logo" href="#">
-        <picture>
-          <img src="img/logo-mobile.svg" width="38" height="33" alt="Кэт энерджи">
-        </picture>
-      </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <div class="header__logo">
+        <a class="header__logo-link logo" href="index.html">
+          <picture>
+            <img class="logo__img" src="img/logo-mobile.svg" width="38" height="33" alt="Кэт энерджи">
+          </picture>
+        </a>
+        <a class="header__logo-link logo" href="index.html">
+          <picture>
+            <img img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
+          </picture>
+        </a>
+      </div>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list site-list list">
+        <ul class="main-nav__list site-list site-list--contrast list">
           <li class="site-list__item site-list__item--active">
             <a href="#">Главная</a>
           </li>
@@ -33,7 +40,7 @@
       </nav>
     </div>
   </header>
-  <main class="main-container">
+  <main class="main-container main-container--cat">
     <h1 class="visually-hidden">Кэт энерджи</h1>
     <section class="promo">
       <div class="promo__background"></div>

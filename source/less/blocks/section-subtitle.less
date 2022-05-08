@@ -7,4 +7,36 @@
     text-transform: uppercase;
     line-height: 1.54;
   }
+
+  &--decorated {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      height: 2px;
+      width: 100vw;
+      background-color: @basic-green;
+    }
+
+    &::before {
+      margin-left: calc(-100vw - 20px);
+    }
+
+    &::after {
+      margin-left: 20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      &::before {
+        margin-left: calc(-100% - 40px);
+      }
+
+      &::after {
+        margin-left: 40px;
+      }
+    }
+  }
 }
