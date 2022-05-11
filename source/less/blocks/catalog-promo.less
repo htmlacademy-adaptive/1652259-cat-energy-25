@@ -1,44 +1,35 @@
 .catalog-promo {
   position: relative;
-  min-height: 289px;
-  padding: 187px 60px 43px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 290px;
+  padding: 58px 0 43px 0;
   .promo-background(url("../../../img/promo-image@1x.jpg"));
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    flex-direction: row;
+
     min-height: 200px;
-    padding: 70px 124px 70px 422px;
+    padding: 0 77px 0 124px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 185px 42px 42px 42px;
+    min-width: 245px;
   }
 
   &::before {
-    position: absolute;
+    position: relative;
     content: "";
-    top: 59px;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 78px;
     height: 80px;
-    margin-left: -40px;
     background-image: url("/img/icons/icon_gift.svg");
     background-size: cover;
 
-    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-      margin-left: 0;
-      margin-top: -40px;
-    }
-
     @media (min-width: @tablet-width) {
-      top: 50%;
-      left: 77px;
-      width: 80px;
-      height: 83px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 56px;
-      left: 50%;
       width: 80px;
       height: 83px;
     }
@@ -50,6 +41,7 @@
   line-height: 1.25;
   text-align: center;
   color: @white;
+  width: 161px;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     text-align: left;

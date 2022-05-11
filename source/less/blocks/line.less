@@ -13,8 +13,10 @@
   }
 }
 
-.line .container {
-  display: block;
+.line__wrapper {
+  .container();
+
+  display: flex;
 }
 
 .line__title {
@@ -22,6 +24,10 @@
   background-color: @white;
   padding: 0 20px;
   margin-left: -20px;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  line-height: 1;
 
   @media (min-width: @tablet-width) {
     padding: 0 40px;
