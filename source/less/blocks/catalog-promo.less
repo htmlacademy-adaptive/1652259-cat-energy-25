@@ -1,10 +1,38 @@
 .catalog-promo {
-  height: 299px;
-  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 290px;
+  padding: 58px 0 43px 0;
   .promo-background(url("../../../img/promo-image@1x.jpg"));
 
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    flex-direction: row;
+
+    min-height: 200px;
+    padding: 0 77px 0 124px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding: 55px 42px 42px 42px;
+    min-width: 245px;
+  }
+
+  &::before {
+    position: relative;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 78px;
+    height: 80px;
+    background-image: url("/img/icons/icon_gift.svg");
+    background-size: cover;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 83px;
+    }
   }
 }
 
@@ -13,4 +41,9 @@
   line-height: 1.25;
   text-align: center;
   color: @white;
+  width: 161px;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    text-align: left;
+  }
 }

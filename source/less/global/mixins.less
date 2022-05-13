@@ -1,5 +1,19 @@
+.container() {
+  box-sizing: content-box;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+}
+
 .list() {
-  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -14,7 +28,7 @@
     @url-img;
 
   background-size: cover, cover;
-  background-position: no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .fieldset-style() {
@@ -32,7 +46,15 @@
 
 .input-box() {
   height: 45px;
+  padding: 13px 15px;
   border: @input-border;
+}
+
+.input-hidden() {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .footer-element-mobile(@justify-value, @padding-value) {

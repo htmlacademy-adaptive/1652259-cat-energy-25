@@ -2,20 +2,63 @@
   .fieldset-style();
 }
 
+.additional-info__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  margin-top: 35px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .additional-info__title {
   margin-bottom: 34px;
 }
 
 .additional-info__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  height: 30px;
+  padding: 5px 0 0 45px;
+
+  .input-text(@black);
+
   &:not(:last-child) {
     margin-bottom: 12px;
   }
 }
 
-.additional-info__label {
-  .input-text(@black);
+.additional-info__option {
+  .input-hidden();
 }
 
-.additional-info__input {
-  display: none;
+.additional-info__indicator {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-image: url("/img/inputs/checkbox.svg");
+  background-repeat: no-repeat;
+}
+
+.additional-info__option:checked ~ .additional-info__indicator::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 14px;
+  top: 8px;
+  left: 6px;
+  background-image: url("/img/inputs/checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
