@@ -41,30 +41,28 @@
   }
 }
 
+.contacts-form__icon {
+  position: relative;
+  left: -35px;
+}
+
 .contacts-form__input {
   flex-basis: 204px;
   flex-grow: 1;
   margin-left: 10px;
+  padding-right: 50px;
 
   background-repeat: no-repeat;
   background-position: 90% 50%;
 
-  &--email {
-    background-image: url("/img/icons/icon_email.svg");
-    background-size: 18px 13px;
-
-    &:focus {
-      background-image: url("/img/icons/icon_email-focus.svg");
-    }
+  &:focus ~ .contacts-form__icon line,
+  &:focus ~ .contacts-form__icon path {
+    stroke: @basic-green;
   }
 
-  &--phone {
-    background-image: url("/img/icons/icon_phone.svg");
-    background-size: 20px 20px;
-
-    &:focus {
-      background-image: url("/img/icons/icon_phone-focus.svg");
-    }
+  &:focus:invalid ~ .contacts-form__icon line,
+  &:focus:invalid ~ .contacts-form__icon path {
+    stroke: @error-color;
   }
 
   @media (min-width: @tablet-width) {
