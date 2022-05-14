@@ -6,7 +6,11 @@
   justify-content: space-between;
   min-height: 290px;
   padding: 58px 0 43px 0;
-  .promo-background(url("../../../img/promo-image@1x.jpg"));
+  .promo-background(url("../../../img/promo-background-mobile@1x.jpg"));
+
+  @media (min-resolution: 2dppx) {
+    .promo-background(url("../../../img/promo-background-mobile@2x.jpg"));
+  }
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     flex-direction: row;
@@ -15,8 +19,22 @@
     padding: 0 77px 0 124px;
   }
 
+  @media (min-width: @tablet-width) {
+    .promo-background(url("../../../img/promo-background-tablet@1x.jpg"));
+
+    @media (min-resolution: 2dppx) {
+      .promo-background(url("../../../img/promo-background-tablet@2x.jpg"));
+    }
+  }
+
   @media (min-width: @desktop-width) {
     min-width: 245px;
+
+    .promo-background(url("../../../img/promo-background-desktop@1x.jpg"));
+
+    @media (min-resolution: 2dppx) {
+      .promo-background(url("../../../img/promo-background-desktop@2x.jpg"));
+    }
   }
 
   &::before {

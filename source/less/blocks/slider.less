@@ -21,14 +21,35 @@
 .slider__buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-width: 210px;
   margin: 15px 35px 0 35px;
 
   @media (min-width: @tablet-width) {
+    min-width: 592px;
     margin: 15px 0 0 0;
   }
 }
 
+.slider__control-area {
+  width: 86px;
+  height: 14px;
+  border: 1px solid @light-grey;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 426px;
+    height: 6px;
+    border: none;
+    background-color: @light-grey;
+  }
+}
+
 .slider__button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: @font-oswald;
   font-size: 16px;
   line-height: 1.25;
@@ -36,4 +57,25 @@
   text-transform: uppercase;
 
   border: none;
+
+  &::after {
+    position: relative;
+    content: "";
+    z-index: 10;
+    bottom: -7px;
+    right: 0;
+    left: 0;
+    width: 45px;
+    height: 2px;
+    background-image: url("../../../img/underline.svg");
+
+    }
+
+    &:hover::after {
+      background-image: url("../../../img/underline-hover.svg");
+    }
+
+    &:active::after {
+      background: none;
+    }
 }

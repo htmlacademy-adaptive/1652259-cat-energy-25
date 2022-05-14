@@ -33,7 +33,11 @@
   grid-column: 1/-1;
   grid-row: 1/2;
 
-  .promo-background(url("../../img/index-background-desktop@1x.jpg"));
+  .promo-background(url("../../img/index-background-mobile@1x.jpg"));
+
+  @media (min-resolution: 2dppx) {
+    .promo-background(url("../../img/index-background-mobile@2x.jpg"));
+  }
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     background: @white;
@@ -42,6 +46,12 @@
   @media (min-width: @desktop-width) {
     grid-column: 2/3;
     grid-row: 1/-1;
+
+    .promo-background(url("../../img/index-background-desktop@1x.jpg"));
+
+    @media (min-resolution: 2dppx) {
+      .promo-background(url("../../img/index-background-desktop@2x.jpg"));
+    }
   }
 }
 
@@ -84,11 +94,17 @@
   @media (min-width: @tablet-width) {
     grid-row: 2/-1;
     grid-column: 1/-1;
+
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: @desktop-width) {
     grid-row: 1/-1;
     grid-column: 2/-1;
+
+    width: 552px;
+    height: 499px;
   }
 }
 
