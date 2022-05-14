@@ -19,6 +19,8 @@
       <div class="header__logo">
         <a class="header__logo-img logo" href="index.html">
           <picture>
+            <source media="(min-width:1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
             <img class="logo__img" src="img/logo-mobile.svg" width="38" height="33" alt="Кэт энерджи">
           </picture>
         </a>
@@ -28,7 +30,7 @@
           </picture>
         </a>
       </div>
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--opened no-js">
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list site-list list">
@@ -45,7 +47,7 @@
       </nav>
     </div>
   </header>
-  <main class="main-container">
+  <main class="main-container no-js">
     <h1 class="visually-hidden">Подбор программы Кэт энерджи</h1>
     <section class="program">
       <div class="container">

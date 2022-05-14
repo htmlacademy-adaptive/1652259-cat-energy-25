@@ -9,13 +9,30 @@
   }
 }
 
+.slider.no-js {
+  .slider__item--after {
+    display: block;
+  }
+
+  .slider__buttons {
+    display: none;
+  }
+}
+
 .slider__items {
   .list();
+
+  display: flex;
+  justify-content: center;
 }
 
 .slider__item {
   width: 100%;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .slider__buttons {
@@ -68,14 +85,13 @@
     width: 45px;
     height: 2px;
     background-image: url("../../../img/underline.svg");
+  }
 
-    }
+  &:hover::after {
+    background-image: url("../../../img/underline-hover.svg");
+  }
 
-    &:hover::after {
-      background-image: url("../../../img/underline-hover.svg");
-    }
-
-    &:active::after {
-      background: none;
-    }
+  &:active::after {
+    background: none;
+  }
 }

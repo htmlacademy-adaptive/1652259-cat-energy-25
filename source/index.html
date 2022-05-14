@@ -30,7 +30,7 @@
           </picture>
         </a>
       </div>
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--opened no-js">
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list site-list site-list--contrast list">
@@ -47,7 +47,7 @@
       </nav>
     </div>
   </header>
-  <main class="main-container main-container--cat">
+  <main class="main-container no-js main-container--cat">
     <h1 class="visually-hidden">Кэт энерджи</h1>
     <section class="promo">
       <div class="promo__background"></div>
@@ -173,9 +173,9 @@
           </dl>
           <p class="example__cost-info stats__cost-info"> Затраты на питание: 15 000 руб.</p>
         </div>
-        <div class="example__visualisation visualisation slider">
+        <div class="example__visualisation visualisation slider no-js">
           <ul class="visualisation__items slider__items">
-            <li class="visualisation__item slider__item">
+            <li class="visualisation__item slider__item slider__item--before">
               <picture>
                 <source media="(min-width:1440px)"
                   srcset="img/cat-fat-desktop@1x.jpg 1x, img/cat-fat-desktop@2x.jpg 2x">
@@ -184,7 +184,7 @@
                   width="280" height="232" alt="Кот до употребелния кэт энерджи">
               </picture>
             </li>
-            <li class="visualisation__item slider__item hidden">
+            <li class="visualisation__item slider__item slider__item--after">
               <picture>
                 <source media="(min-width:1440px)"
                   srcset="img/cat-skinny-desktop@1x.jpg 1x, img/cat-skinny-desktop@2x.jpg 2x">
