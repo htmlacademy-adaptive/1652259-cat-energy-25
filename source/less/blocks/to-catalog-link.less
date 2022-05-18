@@ -1,11 +1,8 @@
 .to-catalog-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   padding: 4px 0;
   width: 134px;
   min-height: 24px;
+  align-items: center;
 
   font-family: @font-oswald;
   font-weight: 400;
@@ -14,17 +11,24 @@
   text-align: center;
   text-transform: uppercase;
 
+  background: url("/img/icons/icon_arrow.svg") 100px 50% no-repeat;
+
+  &:hover,
   &:active {
-    color: fade(@black, 30);
+    background-image: url("/img/icons/icon__arrow-hover.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
     width: 165px;
     min-height: 38px;
+    background-position: 132px 50%;
   }
 
   @media (min-width: @desktop-width) {
     width: 168px;
-    min-height: 38px;
   }
 }
