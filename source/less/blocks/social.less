@@ -4,3 +4,21 @@
   display: flex;
   justify-content: space-between;
 }
+
+.social__link {
+  &:hover {
+    .social__icon {
+      stroke: @basic-green;
+    }
+  }
+
+  &:active {
+    .social__icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+// .socila__link > .social__icon {
+//   stroke: @basic-green;
+// }

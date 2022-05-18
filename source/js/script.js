@@ -5,6 +5,7 @@ const prevSlidButton = document.querySelector(".slider__button--prev");
 const nextSlidButton = document.querySelector(".slider__button--next");
 const beforeImage = document.querySelector(".slider__item--before");
 const afterImage = document.querySelector(".slider__item--after");
+const sliderControls = document.querySelectorAll(".slider__control");
 const noScriptElements = document.querySelectorAll(".no-js");
 
 const activateScripts = () => {
@@ -32,10 +33,23 @@ const hideSlide = (slide) => {
   }
 };
 
+const moveSliderControl = () => {
+  sliderControls.forEach((control) => {
+    if (afterImage.classList.contains("hidden")) {
+      control.classList.add("slider__control--before");
+      control.classList.remove("slider__control--after");
+    } else {
+      control.classList.add("slider__control--after");
+      control.classList.remove("slider__control--before");
+    }
+  });
+};
+
 const showPrevSlide = () => {
   if (beforeImage.classList.contains("hidden")) {
     beforeImage.classList.remove("hidden");
     afterImage.classList.add("hidden");
+    moveSliderControl();
   }
 };
 
@@ -43,6 +57,7 @@ const showNextSlide = () => {
   if (afterImage.classList.contains("hidden")) {
     afterImage.classList.remove("hidden");
     beforeImage.classList.add("hidden");
+    moveSliderControl();
   }
 };
 

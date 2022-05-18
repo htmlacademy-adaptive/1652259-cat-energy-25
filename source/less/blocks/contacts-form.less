@@ -50,20 +50,38 @@
 .contacts-form__icon {
   position: relative;
   left: -35px;
+
+  &--email {
+    stroke: @super-dark-grey;
+  }
+
+  &--phone {
+    fill: @black;
+  }
 }
 
 .contacts-form__input {
   flex-grow: 1;
   margin-left: 10px;
 
-  &:focus ~ .contacts-form__icon line,
-  &:focus ~ .contacts-form__icon path {
-    stroke: @basic-green;
+  &:focus ~ .contacts-form__icon {
+    &--email {
+      stroke: @basic-green;
+    }
+
+    &--phone {
+      fill: @basic-green;
+    }
   }
 
-  &:focus:invalid ~ .contacts-form__icon line,
-  &:focus:invalid ~ .contacts-form__icon path {
-    stroke: @error-color;
+  &:focus:invalid ~ .contacts-form__icon {
+    &--email {
+      stroke: @error-color;
+    }
+
+    &--phone {
+      fill: @error-color;
+    }
   }
 
   @media (min-width: @tablet-width) {
