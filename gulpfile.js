@@ -5,6 +5,8 @@ import postcss from "gulp-postcss";
 import csso from "postcss-csso";
 import rename from "gulp-rename";
 import autoprefixer from "autoprefixer";
+import htmlmin from "gulp-htmlmin";
+import terser from "gulp-terser";
 import squoosh from "gulp-libsquoosh";
 import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
@@ -28,13 +30,20 @@ export const styles = () => {
 //html
 
 const html = () => {
-  return gulp.src("source/*.html").pipe(gulp.dest("build"));
+  return gulp
+    .src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
 };
 
 //scripts
 
 const scripts = () => {
-  return gulp.src("source/js/*.js").pipe(gulp.dest("build/js"));
+  return gulp
+    .src("source/js/*.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
 };
 
 //images
@@ -103,7 +112,7 @@ const clean = () => {
 
 // Server
 
-server = (done) => {
+const server = (done) => {
   browser.init({
     server: {
       baseDir: "build",
@@ -117,7 +126,7 @@ server = (done) => {
 
 // Reload
 
-reload = (done) => {
+const reload = (done) => {
   browser.reload();
   done();
 };
