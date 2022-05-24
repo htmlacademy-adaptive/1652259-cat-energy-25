@@ -1,23 +1,33 @@
 .card-title {
   font-family: @font-oswald;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
   text-transform: uppercase;
   color: @super-dark-grey;
 
+  width: 76px;
+
   &--additional {
     line-height: 1;
     color: @grey;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.4;
+    width: auto;
+  }
 }
 
 .card-title__link {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+
+    text-align: center;
   }
 }

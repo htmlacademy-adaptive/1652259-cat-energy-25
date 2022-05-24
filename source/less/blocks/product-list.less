@@ -1,9 +1,10 @@
 .product-list {
   .list();
+  margin-bottom: 0;
 
   display: grid;
   grid-template-columns: 1fr;
-  gap: 19px;
+  gap: 17px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -12,23 +13,25 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 63px 80px;
+    gap: 60px 55px;
   }
 }
 
 .product-list__item {
   margin: 0;
-
-  &:last-child {
-    margin-top: 17px;
-
-    @media (min-width: @desktop-width) {
-      margin-top: 0;
-    }
-  }
-
   font-size: 12px;
   line-height: 1.33;
   text-align: center;
   color: @grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  &:last-child {
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+    }
+  }
 }

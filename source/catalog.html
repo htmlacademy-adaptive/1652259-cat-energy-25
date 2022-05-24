@@ -26,7 +26,7 @@
         </a>
         <a class="header__logo-text logo" href="index.html">
           <picture>
-            <img img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
+            <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
           </picture>
         </a>
       </div>
@@ -38,7 +38,7 @@
             <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a href="catalog.html">Каталог продукции</a>
+            <a href="#">Каталог продукции</a>
           </li>
           <li class="site-list__item">
             <a href="form.html">Подбор программы</a>
@@ -96,9 +96,9 @@
           <li class="product-list__item product-card">
             <h3 class="product-card__title card-title">
               <a class="card-title__link" href="#"><span class="card-title__product-name">Cat Energy PRO
-                </span><span class="card-title__product-weight">1000 г</span><a class="product-card__link" href="#"></a>
+                </span><span class="card-title__product-weight">1000 г</span></a>
             </h3>
-            <a class="product-card__link-img" href="#">
+            <a class="product-card__link-img product-card__link-img--big-img" href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="img/catalog/catalog-2-desktop@1x.webp 1x, img/catalog/catalog-2-desktop@2x.webp 2x">
@@ -111,7 +111,7 @@
                   srcset="img/catalog/catalog-2-desktop@1x.png 1x, img/catalog/catalog-2-desktop@2x.png 2x">
                 <source media="(min-width:768px)"
                   srcset="img/catalog/catalog-2-tablet@1x.png 1x, img/catalog/catalog-2-tablet@2x.png 2x">
-                <img class="product-card__image" src="img/catalog/catalog-2-mobile@1x.png"
+                <img class="product-card__image product-card__image--big" src="img/catalog/catalog-2-mobile@1x.png"
                   srcset="img/catalog/catalog-2-mobile@2x.png 2x" width="84" height="100"
                   alt="Cat Energy PRO со вкусом курицы 1000 г">
               </picture>
@@ -178,7 +178,7 @@
                 </span><span class="card-title__product-weight">1000 г</span>
               </a>
             </h3>
-            <a class="product-card__link-img" href="#">
+            <a class="product-card__link-img product-card__link-img--big-img" href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="img/catalog/catalog-4-desktop@1x.webp 1x, img/catalog/catalog-4-desktop@2x.webp 2x">
@@ -191,7 +191,7 @@
                   srcset="img/catalog/catalog-4-desktop@1x.png 1x, img/catalog/catalog-4-desktop@2x.png 2x">
                 <source media="(min-width:768px)"
                   srcset="img/catalog/catalog-4-tablet@1x.png 1x, img/catalog/catalog-4-tablet@2x.png 2x">
-                <img class="product-card__image" src="img/catalog/catalog-4-mobile@1x.png"
+                <img class="product-card__image product-card__image--big" src="img/catalog/catalog-4-mobile@1x.png"
                   srcset="img/catalog/catalog-4-mobile@2x.png 2x" width="84" height="100"
                   alt="Cat Energy PRO со вкусом рыбы 1000 г">
               </picture>
@@ -258,7 +258,7 @@
                   Slim</span><span class="card-title__product-weight">1000 г</span>
               </a>
             </h3>
-            <a class="product-card__link-img" href="#">
+            <a class="product-card__link-img product-card__link-img--big-img" href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="img/catalog/catalog-6-desktop@1x.webp 1x, img/catalog/catalog-6-desktop@2x.webp 2x">
@@ -271,7 +271,7 @@
                   srcset="img/catalog/catalog-6-desktop@1x.png 1x, img/catalog/catalog-6-desktop@2x.png 2x">
                 <source media="(min-width:768px)"
                   srcset="img/catalog/catalog-6-tablet@1x.png 1x, img/catalog/catalog-6-tablet@2x.png 2x">
-                <img class="product-card__image" src="img/catalog/catalog-6-mobile@1x.png"
+                <img class="product-card__image product-card__image--big" src="img/catalog/catalog-6-mobile@1x.png"
                   srcset="img/catalog/catalog-6-mobile@2x.png 2x" width="84" height="100"
                   alt="Cat Energy Slim со вкусом гречки 1000 г">
               </picture>
@@ -350,8 +350,7 @@
         <ul class="additional-catalog__list additional-product-list">
           <li class="additional-product-list__item additional-product-card">
             <h3 class="additional-product-card__title card-title card-title--additional">
-              <a class="additional-product-card__link" href="#">Сахарозаменитель<a class="additional-product-card__link"
-                  href="#"></a>
+              <a class="additional-product-card__link" href="#">Сахарозаменитель</a>
             </h3>
             <dl class="additional-product-card__info additional-info-list">
               <div class="additional-info-list__item">
@@ -368,7 +367,7 @@
             <dl class="additional-product-card__info additional-info-list">
               <div class="additional-info-list__item">
                 <dt class="additional-info-list__parameter">5 литров</dt>
-                <dd class="additional-info-list__value"> 500 р.</dd>
+                <dd class="additional-info-list__value"> 50 р.</dd>
               </div>
             </dl>
             <button class="additional-product-card__order-button button">Заказать</button>
@@ -412,15 +411,14 @@
         <h2 class="visually-hidden">Наш адресс</h2>
         <div class="contacts__info">
           <p class="contacts__partnership-text">Приглашаем <br> к сотрудничеству <br> диллеров!</p>
-          <p class="contacts__address"> ул. Большая <br> Конюшенная, д. 19/8<br> Санкт-Петербург </p>
+          <p class="contacts__address"> ул. Большая <br> Конюшенная, д. 19/8<br> <br>Санкт-Петербург </p>
         </div>
       </section>
     </div>
-    <div class="footer__map">
-      <iframe
+    <div class="footer__map-container">
+      <iframe class="footer__map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002935!2d30.320858715830834!3d59.93871916905453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1650904412948!5m2!1sru!2sru"
-        width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <section class="footer__info">
       <div class="container">
@@ -431,26 +429,21 @@
         <div class="footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#" aria-label="Аккаунт Кэт Энерджи ВКонтакте"><span
-                  class="visually-hidden">Мы в
-                  Вконтакте</span>
-                <svg class="social__icon" width="28" height="22">
-                  <use href="img/sprite.svg#icon-vkontakte"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="#" aria-label="Аккаунт Кэт Энерджи на Ютубе"><span
-                  class="visually-hidden">Мы в Ютубе</span>
+              <a class="social__link social__link--youtube" href="#" aria-label="Аккаунт Кэт Энерджи на Ютубе">
                 <svg class="social__icon" width="28" height="22">
                   <use href="img/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="#" aria-label="Аккаунт Кэт Энерджи в Телеграме"><span
-                  class="visually-hidden">Мы в
-                  Телеграме</span>
+              <a class="social__link social__link--vkontakte" href="#" aria-label="Аккаунт Кэт Энерджи ВКонтакте">
+                <svg class="social__icon" width="28" height="22">
+                  <use href="img/sprite.svg#icon-vkontakte"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="#" aria-label="Аккаунт Кэт Энерджи в Телеграме">
                 <svg class="social__icon" width="28" height="22">
                   <use href="img/sprite.svg#icon-telegram"></use>
                 </svg>
