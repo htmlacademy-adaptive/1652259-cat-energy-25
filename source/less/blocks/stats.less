@@ -9,13 +9,24 @@
 }
 
 .stats__list {
+  margin: 0;
+
   display: flex;
   justify-content: center;
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    width: 367px;
+  }
 }
 
 .stats__item {
   &:not(:last-child) {
     margin-right: 32px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 43px;
+    }
   }
 }
 
@@ -24,6 +35,12 @@
   font-size: 24px;
   line-height: 1;
   text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
 }
 
 .stats__description {
@@ -39,6 +56,10 @@
     min-height: 24px;
     width: 77px;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+  }
 }
 
 .stats__cost-info {
@@ -46,9 +67,36 @@
   grid-column: 1/-1;
   grid-row: 2/3;
 
+  margin-top: 20px;
+
+  font-family: @font-oswald;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+
+    text-align: right;
+
+    width: 182px;
+  }
+
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     justify-self: end;
     grid-column: 2/-1;
     grid-row: 1/2;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: start;
+    margin-top: 57px;
+
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 333px;
   }
 }

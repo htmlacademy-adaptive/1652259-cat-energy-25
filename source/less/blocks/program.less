@@ -1,9 +1,35 @@
 .program {
-  padding: 44px 0 32px 0;
+  padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 80px;
+  }
+
+  .container {
+    @media (min-width: @tablet-width) {
+      padding-left: 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 105px;
+    }
+  }
 }
 
 .program__title {
-  margin-bottom: 37px;
+  margin: 26px 0 37px;
+
+  @media (min-width: @tablet-width) {
+    margin: 37px 0 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 44px;
+  }
 }
 
 .program__description {
@@ -18,9 +44,15 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     width: 340px;
+
+    margin-bottom: 75px;
   }
 }
 
 .program__form {
   margin: 0;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    margin-left: 40px;
+  }
 }

@@ -32,9 +32,13 @@
   &:not(:last-child) {
     margin-bottom: 14px;
 
+    @media (min-width: @tablet-width) {
+      margin-bottom: 30px;
+    }
+
     @media (min-width: @desktop-width) {
       margin-bottom: 0;
-      margin-right: 78px;
+      margin-right: 35px;
     }
   }
 
@@ -58,11 +62,21 @@
   &--phone {
     fill: @black;
   }
+
+  @media (min-width: @tablet-width) {
+    left: -52px;
+    top: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+     top: -1px;
+  }
 }
 
 .contacts-form__input {
   flex-grow: 1;
   margin-left: 10px;
+  padding-right: 62px;
 
   &:focus ~ .contacts-form__icon {
     &--email {
@@ -86,5 +100,9 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 495px;
   }
 }

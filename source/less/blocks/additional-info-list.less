@@ -3,9 +3,18 @@
 
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .additional-info-list__item {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    justify-content: flex-end;
+  }
 }

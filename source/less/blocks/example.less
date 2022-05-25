@@ -18,16 +18,16 @@
 }
 
 .example__title {
-  margin: 74px 0 40px 0;
+  margin: 60px 0 32px 0;
 
   grid-area: e-title;
 
   @media (min-width: @tablet-width) {
-    margin: 90px 0 63px 0;
+    margin: 68px 0 48px 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 69px 0 146px 0;
+    margin: 60px 0 136px 0;
   }
 }
 
@@ -36,33 +36,33 @@
   color: @grey;
 
   grid-area: e-text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 64px;
+  }
 }
 
 .example__stats {
   grid-area: e-stats;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 69px;
+    margin-bottom: 50px;
   }
 }
 
-.example__cost-info {
-  font-family: @font-oswald;
-  font-size: 20px;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 20px;
-}
-
 .example__visualisation {
-  margin: 40px 0 40px 0;
-
   grid-area: e-slider;
 
   @media (min-width: @desktop-width) {

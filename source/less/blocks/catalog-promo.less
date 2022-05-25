@@ -6,34 +6,35 @@
   justify-content: space-between;
   min-height: 290px;
   padding: 58px 0 43px 0;
-  .promo-background(url("../../../img/promo-background-mobile@1x.jpg"));
+  .promo-background(url("../../../img/promo-background-mobile@1x.webp"));
 
   @media (min-resolution: 2dppx) {
-    .promo-background(url("../../../img/promo-background-mobile@2x.jpg"));
+    .promo-background(url("../../../img/promo-background-mobile@2x.webp"));
   }
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     flex-direction: row;
 
     min-height: 200px;
-    padding: 0 77px 0 124px;
+    padding: 0 124px 0 77px;
   }
 
   @media (min-width: @tablet-width) {
-    .promo-background(url("../../../img/promo-background-tablet@1x.jpg"));
+    .promo-background(url("../../../img/promo-background-tablet@1x.webp"));
 
     @media (min-resolution: 2dppx) {
-      .promo-background(url("../../../img/promo-background-tablet@2x.jpg"));
+      .promo-background(url("../../../img/promo-background-tablet@2x.webp"));
     }
   }
 
   @media (min-width: @desktop-width) {
     min-width: 245px;
+    padding: 56px 0 4 3px;
 
-    .promo-background(url("../../../img/promo-background-desktop@1x.jpg"));
+    .promo-background(url("../../../img/promo-background-desktop@1x.webp"));
 
     @media (min-resolution: 2dppx) {
-      .promo-background(url("../../../img/promo-background-desktop@2x.jpg"));
+      .promo-background(url("../../../img/promo-background-desktop@2x.webp"));
     }
   }
 
@@ -60,6 +61,7 @@
   text-align: center;
   color: @white;
   width: 161px;
+  margin: 0;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     text-align: left;

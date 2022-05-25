@@ -9,12 +9,11 @@
     left: 0;
     z-index: 100;
     width: 100%;
-    min-height: 214px;
     background-color: @white;
   }
 
   .main-nav__list {
-    min-height: 210px;
+    min-height: 194px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -28,10 +27,13 @@
 
 .main-nav__list {
   .list();
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
+
+    padding-top: 22px;
   }
 }
 
