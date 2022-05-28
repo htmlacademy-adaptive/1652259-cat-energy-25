@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  margin-top: 35px;
+  margin-top: 31px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -18,7 +18,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
 
-    column-gap: 75px;
+    column-gap: 82px;
   }
 }
 
@@ -35,6 +35,8 @@
   padding: 5px 0 0 45px;
 
   .input-text(@black);
+
+  letter-spacing: -0.4px;
 
   cursor: pointer;
 
@@ -63,6 +65,12 @@
   left: 0;
   background-image: url("/img/inputs/checkbox.svg");
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .additional-info__option:checked ~ .additional-info__indicator::before {
@@ -75,4 +83,11 @@
   background-image: url("/img/inputs/checkbox-checked.svg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 26px;
+    height: 24px;
+    top: 8px;
+    left: 5px;
+  }
 }

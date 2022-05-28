@@ -3,6 +3,14 @@
   flex-direction: column;
   align-items: center;
   padding: 28px 0 40px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 28px 58px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .slider.no-js {
@@ -40,8 +48,12 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    min-width: 592px;
-    margin: 5px 0 0 0;
+    min-width: 576px;
+    margin: 8px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 3px;
   }
 }
 
@@ -122,13 +134,10 @@
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
+  background: transparent;
 
+  padding: 0 2px;
   border: none;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 1.5;
-  }
 
   &::after {
     position: relative;
@@ -148,5 +157,20 @@
 
   &:active::after {
     background: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      bottom: 2px;
+    }
   }
 }

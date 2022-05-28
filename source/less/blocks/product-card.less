@@ -11,7 +11,7 @@
   padding: 8px 0 14px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 38px 39px 38px;
+    padding: 0 38px 42px;
   }
 
   @media (min-width: @tablet-width) {
@@ -31,18 +31,25 @@
   margin-top: 7px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 21px;
-    margin-top: 0;
+    margin: 20px 0 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 17px 0 21px;
   }
 }
 
 .product-card__info.info-list {
   grid-area: card-info;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
   }
 }
 
@@ -53,10 +60,16 @@
   margin: 0;
   width: 100%;
 
+  letter-spacing: 0.6px;
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    line-height: 1.25;
-    height: 48px;
+    line-height: 0.7;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0;
   }
 }
 
@@ -65,31 +78,45 @@
   justify-self: center;
   align-self: center;
 
+  padding-top: 19px;
+
   @media (min-width: @tablet-width) {
-    padding-top: 34px;
+    padding-top: 31px;
+    padding-bottom: 13px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 26px;
-    padding-bottom: 33px;
+    padding-top: 27px;
+    padding-bottom: 14px;
   }
 
   &--big-img {
+    padding-top: 7px;
+
     @media (min-width: @tablet-width) {
-      padding-top: 0;
-      padding-bottom: 34px;
+      padding-top: 4px;
+      padding-bottom: 6px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-bottom: 20px;
+      padding-top: 0;
+      padding-bottom: 3px;
+    }
+  }
+}
+
+.product-card:first-child {
+  .product-card__link-img {
+    @media (max-width: @mobile-width-only) {
+      padding-top: 0;
     }
   }
 }
 
 .product-card__image {
   @media (min-width: @tablet-width) {
-    width: 168px;
-    height: 200px;
+    width: 162px;
+    height: 173px;
   }
 
   @media (min-width: @desktop-width) {
@@ -100,6 +127,11 @@
   }
 
   &--big {
+    @media (min-width: @tablet-width) {
+      width: 169px;
+      height: 206px;
+    }
+
     @media (min-width: @desktop-width) {
       height: 203px;
     }

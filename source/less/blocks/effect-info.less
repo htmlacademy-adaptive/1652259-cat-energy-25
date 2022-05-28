@@ -8,7 +8,7 @@
   margin: 0 20px;
 
   @media (min-width: @tablet-width) {
-    margin: 64px 20px 0 0;
+    margin: 51px 20px 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,10 +32,10 @@
     grid-template-columns: 1fr 288px;
     padding: 21px 0 52px 53px;
     margin-top: 0;
-    margin-bottom: 46px;
+    margin-bottom: 49px;
 
     &:not(&:last-child) {
-      margin-bottom: 88px;
+      margin-bottom: 94px;
     }
   }
 
@@ -69,11 +69,16 @@
 .effect-info__title {
   grid-column: 2/3;
   grid-row: 1/2;
-  margin: 0;
+  margin: 0 0 0 -2px;
+  letter-spacing: -0.6px;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-column: 1/2;
     grid-row: 1/2;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 4px;
   }
 }
 
@@ -88,15 +93,15 @@
 
   @media (min-width: @tablet-width) {
     &--slim {
-      margin-left: 45px;
-      margin-bottom: 20px;
+      margin-left: 46px;
+      margin-bottom: 24px;
 
       width: 200px;
       height: 211px;
     }
 
     &--pro {
-      margin-left: 13px;
+      margin-left: 11px;
       margin-bottom: 17px;
 
       width: 268px;
@@ -118,6 +123,7 @@
       height: 100px;
 
       margin-left: -20px;
+      margin-top: 4px;
     }
   }
 
@@ -129,7 +135,7 @@
 
 .effect-info__description {
   grid-column: 1/-1;
-  margin: 22px 0 15px;
+  margin: 23px 0 15px;
   padding-bottom: 22px;
   border-bottom: @element-border;
   color: @grey;
@@ -141,7 +147,8 @@
     font-size: 16px;
     line-height: 1.5;
 
-    margin-top: 29px;
+    margin-top: 25px;
+    margin-bottom: 20px;
     padding-right: 5px;
     min-width: 340px;
   }

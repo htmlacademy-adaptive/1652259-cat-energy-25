@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 23px;
+  padding-top: 20px;
 
   @media (min-width: @tablet-width) {
     padding-top: 133px;
@@ -28,7 +28,7 @@
 }
 
 .show-more__title {
-  margin: 14px 0 8px 0;
+  margin: 23px 0 8px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -63,4 +63,9 @@
 
 .show-more__button {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    height: 40px;
+    line-height: 0.7;
+  }
 }

@@ -10,6 +10,18 @@
     width: 100%;
     z-index: -1;
     background-color: @basic-green;
+
+    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+      top: 61%;
+    }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .contacts-form {
+    .line::before {
+      top: 34%;
+    }
   }
 }
 
@@ -29,8 +41,16 @@
 
   line-height: 1;
 
+  letter-spacing: -1px;
+
   @media (min-width: @tablet-width) {
     padding: 0 40px;
+    margin-left: 0;
+
+    letter-spacing: -1.3px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-left: -40px;
   }
 }
