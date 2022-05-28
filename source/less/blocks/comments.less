@@ -15,17 +15,26 @@
 }
 
 .comments__field {
-  padding-top: 9px;
+  padding: 10px 0 0 11px;
   width: 100%;
   min-height: 150px;
 
   border: @input-border;
-  text-align: center;
 
   .input-text(@grey);
 
+  letter-spacing: -0.3px;
+
   @media (min-width: @tablet-width) {
-    text-align: left;
-    padding-left: 19px;
+    min-height: 177px;
+    max-width: 631px;
+
+    padding-left: 17px;
+
+    letter-spacing: -0.5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
   }
 }

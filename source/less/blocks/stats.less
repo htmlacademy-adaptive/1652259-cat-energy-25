@@ -67,13 +67,18 @@
   grid-column: 1/-1;
   grid-row: 2/3;
 
-  margin-top: 20px;
+  margin-top: 6px;
 
   font-family: @font-oswald;
   font-size: 14px;
+  letter-spacing: -0.3px;
   line-height: 1.43;
   text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -82,6 +87,8 @@
     text-align: right;
 
     width: 182px;
+
+    margin: 0;
   }
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
@@ -92,11 +99,27 @@
 
   @media (min-width: @desktop-width) {
     justify-self: start;
-    margin-top: 57px;
+    margin-top: 44px;
 
     display: flex;
     justify-content: space-between;
 
-    min-width: 333px;
+    min-width: 330px;
+  }
+}
+
+.stats__cost-description {
+  @media (min-width: @tablet-width) {
+    margin: 11px 0;
+  }
+}
+
+.stats__cost-value {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 11px;
   }
 }

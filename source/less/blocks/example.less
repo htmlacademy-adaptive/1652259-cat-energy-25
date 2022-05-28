@@ -1,3 +1,9 @@
+.example {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 13px;
+  }
+}
+
 .example .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -8,17 +14,17 @@
     "e-slider";
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 444px 1fr;
     grid-template-areas:
       "e-title e-slider"
       "e-text e-slider"
       "e-stats e-slider";
-    column-gap: 193px;
+    column-gap: 137px;
   }
 }
 
 .example__title {
-  margin: 60px 0 32px 0;
+  margin: 61px 0 31px;
 
   grid-area: e-title;
 
@@ -27,7 +33,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 60px 0 136px 0;
+    margin: 62px 0 136px 0;
   }
 }
 
@@ -41,11 +47,12 @@
     font-size: 16px;
     line-height: 1.5;
 
-    margin-bottom: 52px;
+    margin-bottom: 54px;
+    padding-right: 6px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 64px;
+    margin-bottom: 69px;
   }
 }
 

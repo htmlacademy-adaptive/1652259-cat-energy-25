@@ -2,11 +2,14 @@
   .fieldset-style();
   .input-text(@super-dark-grey);
 
+  letter-spacing: -0.6px;
+
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
     padding: 25px 28px;
+    border: @input-border;
   }
 }
 
@@ -25,6 +28,9 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 23px;
+      padding-left: 60px;
+
+      letter-spacing: -0.5px;
     }
   }
 
@@ -41,10 +47,17 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: -2px;
   background-image: url("/img/inputs/radiobutton.svg");
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+  }
 }
 
 .program-choice__option:checked ~ .program-choice__indicator::before {
@@ -57,4 +70,11 @@
   background-image: url("/img/inputs/radiobutton-checked.svg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 12px;
+    left: 12px;
+  }
 }
